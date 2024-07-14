@@ -539,7 +539,7 @@ OTBL="asv_table_02_add_taxa"
  
 #Mario: Added -o flag which specifies the output directory location
 #http://qiime.org/scripts/summarize_taxa.html
-summarize_taxa.py -i "${output_dir}/asvs/${OTBL}.biom" -L 2,6,7 -o "${output_dir}/asvs"
+summarize_taxa.py -i "${output_dir}/asvs/${OTBL}.biom" -a -L 2,6,7 -o "${output_dir}/asvs"
 
 # will need to chnage if we add more levels
 to_process=(

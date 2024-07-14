@@ -177,8 +177,8 @@ usearch -fastq_eestats2 ${ODIR}/${JB2}_A1P1.M${mmatchnum}.fq -quiet -output "${O
 if [[ ! -z "$LENS" ]]; then
     for STARTAT2 in ${LENS[@]}; do
         echo ${STARTAT2} | tee /dev/tty
-        STARTAT2_beg=$((STARTAT2 - 1))
-        STARTAT2_end=$((STARTAT2 + 1))
+        STARTAT2_beg=$((STARTAT2))
+        STARTAT2_end=$((STARTAT2 + 10))
         usearch -fastq_eestats2 "${ODIR}/${JB2}_A1P1.M${mmatchnum}.fq" -quiet -output "${ODIR}/${JB2}.M${mmatchnum}_eestats.start_${STARTAT2}.inc_${INC}.txt" -length_cutoffs "${STARTAT2_beg},${STARTAT2_end},${INC}"
     done
 fi
